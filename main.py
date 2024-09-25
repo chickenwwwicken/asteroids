@@ -61,7 +61,11 @@ def main():
             if asteroid.collides_with(player1):
                 print("Game over!")
                 sys.exit()
-
+            
+            for shot in shots:
+                if asteroid.collides_with(shot):
+                    shot.kill()
+                    asteroid.kill()
 
         # player rotation method from player.py
         # this next line was removed because added to Group above
