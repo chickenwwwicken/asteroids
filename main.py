@@ -65,7 +65,7 @@ def main():
             for shot in shots:
                 if asteroid.collides_with(shot):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split()
 
         # player rotation method from player.py
         # this next line was removed because added to Group above
